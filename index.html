@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sudan & Mauritania</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..800,0..100;1,9..144,400..800,0..100&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fbf6ee; --dot:#eadfcd; --paper:#ffffff; --ink:#1b1714; --muted:#7d7266; --line:#efe5d6;
+  --red:#d21034; --red-soft:#fde4e8; --green:#00804a; --green-soft:#dcf2e6; --black:#1b1714; --gold:#f2b705; --gold-soft:#fff3c9;
+  --ph:#f7f0e5; --phline:#e0d2bd; --shadow:0 2px 0 rgba(27,23,20,.06),0 12px 30px -12px rgba(27,23,20,.18);
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#141210; --dot:#262220; --paper:#1d1a17; --ink:#f4ede3; --muted:#a89c8d; --line:#2e2925;
+  --red:#ff4d6a; --red-soft:#3a1a20; --green:#2fc27a; --green-soft:#16301f; --black:#f4ede3; --gold:#ffcc33; --gold-soft:#3a3016;
+  --ph:#24201c; --phline:#3d3630; --shadow:0 12px 30px -12px rgba(0,0,0,.6);}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);font-family:Nunito,system-ui,sans-serif;line-height:1.65;
+  background-color:var(--bg);background-image:radial-gradient(var(--dot) 1.2px,transparent 1.2px);background-size:22px 22px}
+.wrap{max-width:1060px;margin:0 auto;padding:0 18px}
+h1,h2,h3,.serif{font-family:Fraunces,Georgia,serif;font-variation-settings:'SOFT' 100;line-height:1.08;margin:0}
+
+/* flag stripe */
+.stripe{height:8px;display:flex}
+.stripe span{flex:1}
+.stripe .r{background:#d21034}.stripe .w{background:#fff}.stripe .b{background:#1b1714}.stripe .g{background:#00804a}.stripe .y{background:#f2b705}
+
+/* nav */
+nav{position:sticky;top:12px;z-index:20;margin:14px auto 0;width:max-content;max-width:calc(100% - 24px)}
+nav .pill{display:flex;gap:4px;align-items:center;background:var(--paper);border:1.5px solid var(--line);border-radius:999px;padding:6px;box-shadow:var(--shadow);overflow-x:auto;scrollbar-width:none}
+nav .pill::-webkit-scrollbar{display:none}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);font-weight:700;font-size:.85rem;padding:7px 14px;border-radius:999px;transition:all .2s}
+nav a:hover{color:var(--ink);background:var(--ph)}
+nav a.on{background:var(--black);color:var(--bg)}
+
+/* hero */
+header{position:relative;padding:80px 0 70px;text-align:center;overflow:hidden}
+.badges{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:22px}
+.badge{font-weight:800;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;padding:6px 14px;border-radius:999px;border:1.5px solid var(--black);background:var(--paper)}
+.badge.r{transform:rotate(-3deg);background:var(--red);color:#fff;border-color:var(--red)}
+.badge.g{transform:rotate(2deg);background:var(--green);color:#fff;border-color:var(--green)}
+h1{font-size:clamp(3rem,11vw,7rem);font-weight:800;letter-spacing:-.02em}
+h1 .s{color:var(--red)}
+h1 .amp{color:var(--gold);font-style:italic;font-weight:500;display:inline-block;transform:translateY(-.04em)}
+h1 .m{color:var(--green);display:block}
+.lede{max-width:560px;margin:26px auto 0}
+.float{position:absolute;pointer-events:none;animation:bob 6s ease-in-out infinite}
+.float.star{top:70px;right:10%;width:54px;color:var(--gold)}
+.float.tri{bottom:60px;left:8%;width:64px;color:var(--green);animation-delay:-2s}
+.float.dot{top:120px;left:14%;width:22px;height:22px;border-radius:50%;background:var(--red);animation-delay:-4s}
+.float.moon{bottom:90px;right:14%;width:40px;color:var(--gold);animation-delay:-3s}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-12px) rotate(8deg)}}
+
+/* placeholders */
+.ph-img{background:var(--ph);border:2px dashed var(--phline);border-radius:18px;display:flex;flex-direction:column;gap:4px;align-items:center;justify-content:center;color:var(--muted);font-size:.82rem;font-weight:700;text-align:center;padding:10px}
+.ph-img::before{content:'\1F4F7';font-size:1.3rem;opacity:.7}
+.ph-img.video::before{content:'\25B6\FE0F'}
+.ph-text{background:var(--ph);border:2px dashed var(--phline);border-radius:14px;padding:14px 16px;color:var(--muted);font-size:.92rem;font-style:italic}
+
+/* sections */
+section{padding:70px 0}
+.sec-head{text-align:center;margin-bottom:38px}
+.eyebrow{display:inline-block;font-weight:800;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;padding:5px 12px;border-radius:999px;background:var(--gold-soft);color:var(--ink);margin-bottom:12px}
+h2{font-size:clamp(2rem,5.5vw,3.2rem);font-weight:700}
+h2 em{color:var(--red);font-style:italic}
+.sec-head .ph-text{max-width:560px;margin:16px auto 0}
+.wave{display:block;width:100%;height:28px;color:var(--line)}
+
+/* bios */
+.bios{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:22px}
+.bio{position:relative;background:var(--paper);border:1.5px solid var(--line);border-radius:28px;padding:0 0 22px;box-shadow:var(--shadow);overflow:hidden;transition:transform .25s}
+.bio:hover{transform:translateY(-6px) rotate(-.6deg)}
+.bio .top{height:84px}
+.bio:nth-child(1) .top{background:var(--red)}
+.bio:nth-child(2) .top{background:var(--black)}
+.bio:nth-child(3) .top{background:var(--green)}
+.bio .top{background-image:radial-gradient(rgba(255,255,255,.22) 1.5px,transparent 1.5px);background-size:14px 14px}
+.bio .ph-img{width:124px;aspect-ratio:1;border-radius:50%;margin:-62px auto 12px;border:5px solid var(--paper);border-style:solid;background:var(--ph);outline:2px dashed var(--phline);outline-offset:-10px}
+.bio h3{text-align:center;font-size:1.45rem;font-weight:700;margin-bottom:16px}
+.facts{list-style:none;margin:0;padding:0 20px;display:grid;gap:8px}
+.facts li{display:flex;gap:10px;align-items:center;background:var(--bg);border-radius:12px;padding:8px 12px;font-size:.9rem}
+.facts .ic{font-size:1.05rem;width:22px;text-align:center}
+.facts b{font-weight:800;min-width:74px}
+.facts span{color:var(--muted);font-style:italic}
+
+/* topics */
+.post{margin-bottom:64px}
+.post:last-child{margin-bottom:0}
+.post-head{display:flex;align-items:center;gap:14px;margin-bottom:6px}
+.num{flex:none;width:46px;height:46px;border-radius:14px;display:grid;place-items:center;font-family:Fraunces,serif;font-weight:800;font-size:1.05rem;color:#fff;background:var(--black);transform:rotate(-6deg)}
+.post:nth-child(3n+1) .num{background:var(--red)}
+.post:nth-child(3n+2) .num{background:var(--green)}
+.post h3{font-size:clamp(1.5rem,3.6vw,2rem);font-weight:700}
+.covers{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 20px 60px;padding:0;list-style:none}
+.covers li{font-size:.78rem;font-weight:700;padding:4px 10px;border-radius:999px;background:var(--paper);border:1.5px solid var(--line);color:var(--muted)}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.col{background:var(--paper);border:1.5px solid var(--line);border-radius:24px;padding:18px;box-shadow:var(--shadow);transition:transform .25s}
+.col:hover{transform:translateY(-4px)}
+.tag{display:inline-flex;gap:6px;align-items:center;font-weight:800;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;border-radius:999px;margin-bottom:14px}
+.sd .tag{background:var(--red-soft);color:var(--red)}
+.mr .tag{background:var(--green-soft);color:var(--green)}
+.sd{border-top:6px solid var(--red)} .mr{border-top:6px solid var(--green)}
+.col .ph-img{aspect-ratio:16/10;margin-bottom:12px}
+.compare{margin-top:18px;border-radius:24px;padding:20px;background:var(--black);color:var(--bg);position:relative}
+.compare .lbl{display:inline-flex;align-items:center;gap:8px;font-weight:800;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px}
+.compare .lbl i{width:10px;height:10px;border-radius:50%;display:inline-block}
+.compare .ph-text{background:transparent;border-color:rgba(255,255,255,.25);color:inherit;opacity:.75}
+@media (prefers-color-scheme:dark){.compare .ph-text{border-color:rgba(0,0,0,.25)}}
+.learned{background:var(--gold-soft);border-radius:24px;padding:22px;border:1.5px solid var(--gold)}
+.learned .ph-text{background:rgba(255,255,255,.5);border-color:var(--gold)}
+
+/* videos */
+.vids{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.vcard{background:var(--paper);border:1.5px solid var(--line);border-radius:24px;padding:18px;box-shadow:var(--shadow)}
+.vcard .ph-img{aspect-ratio:16/9;margin-bottom:12px}
+.present{background:var(--paper);border-radius:32px;padding:16px;box-shadow:var(--shadow);border:1.5px solid var(--line)}
+.present .ph-img{aspect-ratio:16/9;border-radius:22px}
+.screen-dots{display:flex;gap:6px;padding:2px 6px 12px}
+.screen-dots i{width:11px;height:11px;border-radius:50%}
+
+/* sources */
+.sources{max-width:720px;margin:0 auto;background:var(--paper);border-radius:24px;padding:22px 26px;border:1.5px solid var(--line);box-shadow:var(--shadow)}
+.sources ol{margin:0;padding-left:20px;color:var(--muted);font-style:italic}
+.sources li{padding:6px 0;border-bottom:1.5px dashed var(--line)}
+.sources li:last-child{border:0}
+
+footer{text-align:center;padding:30px 0 50px;color:var(--muted);font-weight:700;font-size:.85rem}
+footer .hearts{font-size:1.1rem;letter-spacing:4px}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}.float{animation:none}}
+
+@media (max-width:720px){
+  .pair,.vids{grid-template-columns:1fr}
+  header{padding:56px 0 50px}
+  section{padding:52px 0}
+  .covers{margin-left:0}
+  .float.star{right:4%;width:38px}.float.tri{left:3%;width:44px}
+}
+</style>
+</head>
+<body>
+<div class="stripe"><span class="r"></span><span class="w"></span><span class="b"></span><span class="g"></span><span class="y"></span><span class="g"></span><span class="r"></span></div>
+
+<nav><div class="pill">
+  <a href="#top">Home</a>
+  <a href="#group">The Group</a>
+  <a href="#task1">Task 1</a>
+  <a href="#videos">Videos</a>
+  <a href="#presentation">Presentation</a>
+  <a href="#sources">Sources</a>
+</div></nav>
+
+<header id="top"><div class="wrap">
+  <svg class="float star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21l1.6-7L2 9.2l7.1-.6z"/></svg>
+  <svg class="float moon" viewBox="0 0 24 24" fill="currentColor"><path d="M3 6a10 10 0 0 0 18 0 9 9 0 0 1-18 0z"/></svg>
+  <svg class="float tri" viewBox="0 0 24 24" fill="currentColor"><path d="M3 3l18 9-18 9z"/></svg>
+  <div class="float dot"></div>
+  <div class="badges"><span class="badge r">Task 1</span><span class="badge">[Class name]</span><span class="badge g">Noa · Isabella · Dania</span></div>
+  <h1><span class="s">Sudan</span> <span class="amp">&amp;</span><span class="m">Mauritania</span></h1>
+  <div class="ph-text lede">[Short intro to the blog: who we are, what we're exploring, why these two countries]</div>
+</div></header>
+
+<svg class="wave" viewBox="0 0 1200 28" preserveAspectRatio="none"><path d="M0 14 Q 50 0 100 14 T 200 14 T 300 14 T 400 14 T 500 14 T 600 14 T 700 14 T 800 14 T 900 14 T 1000 14 T 1100 14 T 1200 14" fill="none" stroke="currentColor" stroke-width="3"/></svg>
+
+<!-- ========== MEET THE GROUP ========== -->
+<section id="group"><div class="wrap">
+  <div class="sec-head reveal"><span class="eyebrow">Hi, it's us</span><h2>Meet the <em>group</em></h2></div>
+  <div class="bios">
+    <article class="bio reveal"><div class="top"></div><div class="ph-img">Photo</div><h3>Noa El-Bahri</h3><ul class="facts">
+      <li><span class="ic">🎓</span><b>Major</b><span>[Major]</span></li>
+      <li><span class="ic">📚</span><b>Year</b><span>[Year]</span></li>
+      <li><span class="ic">📍</span><b>From</b><span>[Hometown]</span></li>
+      <li><span class="ic">🍽️</span><b>Fave dish</b><span>[Favorite Arab dish]</span></li>
+      <li><span class="ic">🎶</span><b>Fave artist</b><span>[Favorite Arab artist]</span></li></ul></article>
+    <article class="bio reveal"><div class="top"></div><div class="ph-img">Photo</div><h3>Isabella Perez</h3><ul class="facts">
+      <li><span class="ic">🎓</span><b>Major</b><span>[Major]</span></li>
+      <li><span class="ic">📚</span><b>Year</b><span>[Year]</span></li>
+      <li><span class="ic">📍</span><b>From</b><span>[Hometown]</span></li>
+      <li><span class="ic">🍽️</span><b>Fave dish</b><span>[Favorite Arab dish]</span></li>
+      <li><span class="ic">🎶</span><b>Fave artist</b><span>[Favorite Arab artist]</span></li></ul></article>
+    <article class="bio reveal"><div class="top"></div><div class="ph-img">Photo</div><h3>Dania Tarabishy</h3><ul class="facts">
+      <li><span class="ic">🎓</span><b>Major</b><span>[Major]</span></li>
+      <li><span class="ic">📚</span><b>Year</b><span>[Year]</span></li>
+      <li><span class="ic">📍</span><b>From</b><span>[Hometown]</span></li>
+      <li><span class="ic">🍽️</span><b>Fave dish</b><span>[Favorite Arab dish]</span></li>
+      <li><span class="ic">🎶</span><b>Fave artist</b><span>[Favorite Arab artist]</span></li></ul></article>
+  </div>
+</div></section>
+
+<svg class="wave" viewBox="0 0 1200 28" preserveAspectRatio="none"><path d="M0 14 Q 50 0 100 14 T 200 14 T 300 14 T 400 14 T 500 14 T 600 14 T 700 14 T 800 14 T 900 14 T 1000 14 T 1100 14 T 1200 14" fill="none" stroke="currentColor" stroke-width="3"/></svg>
+
+<!-- ========== TASK 1 ========== -->
+<section id="task1"><div class="wrap">
+  <div class="sec-head reveal"><span class="eyebrow">Task 1</span><h2>Getting to know the countries <em>&amp; their people</em></h2><div class="ph-text">[Intro to Task 1]</div></div>
+
+  <div class="posts">
+  <!-- 01 THE LAND -->
+  <article class="post reveal" id="land">
+    <div class="post-head"><span class="num">01</span><h3>The Land</h3></div>
+    <ul class="covers"><li>Location</li><li>Geography</li><li>Major cities</li><li>Climate &amp; environment</li></ul>
+    <div class="pair">
+      <div class="col sd"><span class="tag">🇸🇩 Sudan</span><div class="ph-img">Map or landscape photo</div><div class="ph-text">[Text]</div></div>
+      <div class="col mr"><span class="tag">🇲🇷 Mauritania</span><div class="ph-img">Map or landscape photo</div><div class="ph-text">[Text]</div></div>
+    </div>
+    <div class="compare"><span class="lbl"><i style="background:#d21034"></i><i style="background:#00804a"></i>Side by side</span><div class="ph-text">[Comparison]</div></div>
+  </article>
+
+  <!-- 02 HISTORY -->
+  <article class="post reveal" id="history">
+    <div class="post-head"><span class="num">02</span><h3>History</h3></div>
+    <ul class="covers"><li>Brief history</li><li>How it shapes things today</li></ul>
+    <div class="pair">
+      <div class="col sd"><span class="tag">🇸🇩 Sudan</span><div class="ph-img">Photo</div><div class="ph-text">[Text]</div></div>
+      <div class="col mr"><span class="tag">🇲🇷 Mauritania</span><div class="ph-img">Photo</div><div class="ph-text">[Text]</div></div>
+    </div>
+    <div class="compare"><span class="lbl"><i style="background:#d21034"></i><i style="background:#00804a"></i>Side by side</span><div class="ph-text">[Comparison]</div></div>
+  </article>
+
+  <!-- 03 THE PEOPLE -->
+  <article class="post reveal" id="people">
+    <div class="post-head"><span class="num">03</span><h3>The People</h3></div>
+    <ul class="covers"><li>People &amp; communities</li><li>Languages &amp; dialects</li></ul>
+    <div class="pair">
+      <div class="col sd"><span class="tag">🇸🇩 Sudan</span><div class="ph-img">Photo</div><div class="ph-text">[Text]</div></div>
+      <div class="col mr"><span class="tag">🇲🇷 Mauritania</span><div class="ph-img">Photo</div><div class="ph-text">[Text]</div></div>
+    </div>
+    <div class="compare"><span class="lbl"><i style="background:#d21034"></i><i style="background:#00804a"></i>Side by side</span><div class="ph-text">[Comparison]</div></div>
+  </article>
+
+  <!-- 04 DAILY LIFE -->
+  <article class="post reveal" id="daily">
+    <div class="post-head"><span class="num">04</span><h3>Daily Life</h3></div>
+    <ul class="covers"><li>An ordinary day</li><li>Clothing</li></ul>
+    <div class="pair">
+      <div class="col sd"><span class="tag">🇸🇩 Sudan</span><div class="ph-img">Photo</div><div class="ph-text">[Text]</div></div>
+      <div class="col mr"><span class="tag">🇲🇷 Mauritania</span><div class="ph-img">Photo</div><div class="ph-text">[Text]</div></div>
+    </div>
+    <div class="compare"><span class="lbl"><i style="background:#d21034"></i><i style="background:#00804a"></i>Side by side</span><div class="ph-text">[Comparison]</div></div>
+  </article>
+
+  <!-- 05 FOOD -->
+  <article class="post reveal" id="food">
+    <div class="post-head"><span class="num">05</span><h3>Food</h3></div>
+    <ul class="covers"><li>Dishes</li><li>Drinks</li><li>Eating together</li></ul>
+    <div class="pair">
+      <div class="col sd"><span class="tag">🇸🇩 Sudan</span><div class="ph-img">Food photo</div><div class="ph-text">[Text]</div></div>
+      <div class="col mr"><span class="tag">🇲🇷 Mauritania</span><div class="ph-img">Food photo</div><div class="ph-text">[Text]</div></div>
+    </div>
+    <div class="compare"><span class="lbl"><i style="background:#d21034"></i><i style="background:#00804a"></i>Side by side</span><div class="ph-text">[Comparison]</div></div>
+  </article>
+
+  <!-- 06 MUSIC & ART -->
+  <article class="post reveal" id="arts">
+    <div class="post-head"><span class="num">06</span><h3>Music &amp; Art</h3></div>
+    <ul class="covers"><li>Music</li><li>Art</li><li>Artists</li></ul>
+    <div class="pair">
+      <div class="col sd"><span class="tag">🇸🇩 Sudan</span><div class="ph-img">Photo or embedded song</div><div class="ph-text">[Text]</div></div>
+      <div class="col mr"><span class="tag">🇲🇷 Mauritania</span><div class="ph-img">Photo or embedded song</div><div class="ph-text">[Text]</div></div>
+    </div>
+    <div class="compare"><span class="lbl"><i style="background:#d21034"></i><i style="background:#00804a"></i>Side by side</span><div class="ph-text">[Comparison]</div></div>
+  </article>
+
+  <!-- 07 CELEBRATIONS & TRADITIONS -->
+  <article class="post reveal" id="traditions">
+    <div class="post-head"><span class="num">07</span><h3>Celebrations &amp; Traditions</h3></div>
+    <ul class="covers"><li>Holidays</li><li>Celebrations</li><li>Traditions &amp; customs</li></ul>
+    <div class="pair">
+      <div class="col sd"><span class="tag">🇸🇩 Sudan</span><div class="ph-img">Photo</div><div class="ph-text">[Text]</div></div>
+      <div class="col mr"><span class="tag">🇲🇷 Mauritania</span><div class="ph-img">Photo</div><div class="ph-text">[Text]</div></div>
+    </div>
+    <div class="compare"><span class="lbl"><i style="background:#d21034"></i><i style="background:#00804a"></i>Side by side</span><div class="ph-text">[Comparison]</div></div>
+  </article>
+
+  <!-- 08 WHAT MAKES THEM UNIQUE -->
+  <article class="post reveal" id="unique">
+    <div class="post-head"><span class="num">08</span><h3>What Makes Them Unique</h3></div>
+    <ul class="covers"><li>Interesting facts</li><li>What stands out</li></ul>
+    <div class="pair">
+      <div class="col sd"><span class="tag">🇸🇩 Sudan</span><div class="ph-img">Photo</div><div class="ph-text">[Text]</div></div>
+      <div class="col mr"><span class="tag">🇲🇷 Mauritania</span><div class="ph-img">Photo</div><div class="ph-text">[Text]</div></div>
+    </div>
+  </article>
+
+  <!-- 09 WHAT WE LEARNED -->
+  <article class="post reveal" id="takeaways">
+    <div class="post-head"><span class="num">09</span><h3>What We Learned</h3></div>
+    <ul class="covers"><li>Connections</li><li>Our perspective</li><li>How our understanding changed</li></ul>
+    <div class="learned"><div class="ph-text">[Text]</div></div>
+  </article>
+  </div>
+</div></section>
+
+<svg class="wave" viewBox="0 0 1200 28" preserveAspectRatio="none"><path d="M0 14 Q 50 0 100 14 T 200 14 T 300 14 T 400 14 T 500 14 T 600 14 T 700 14 T 800 14 T 900 14 T 1000 14 T 1100 14 T 1200 14" fill="none" stroke="currentColor" stroke-width="3"/></svg>
+
+<!-- ========== VIDEOS ========== -->
+<section id="videos"><div class="wrap">
+  <div class="sec-head reveal"><span class="eyebrow">Watch</span><h2>Exploring through <em>videos</em></h2><div class="ph-text">[Intro]</div></div>
+  <div class="vids">
+    <div class="vcard sd reveal"><span class="tag">🇸🇩 Sudan</span><div class="ph-img video">Video embed</div><div class="ph-text">[What we learned from it]</div></div>
+    <div class="vcard mr reveal"><span class="tag">🇲🇷 Mauritania</span><div class="ph-img video">Video embed</div><div class="ph-text">[What we learned from it]</div></div>
+  </div>
+</div></section>
+
+<!-- ========== PRESENTATION ========== -->
+<section id="presentation"><div class="wrap">
+  <div class="sec-head reveal"><span class="eyebrow">Final product</span><h2>Our <em>presentation</em></h2><div class="ph-text">[Short description]</div></div>
+  <div class="present reveal"><div class="screen-dots"><i style="background:#d21034"></i><i style="background:#f2b705"></i><i style="background:#00804a"></i></div><div class="ph-img video">Recorded PowerPoint</div></div>
+</div></section>
+
+<!-- ========== SOURCES ========== -->
+<section id="sources"><div class="wrap">
+  <div class="sec-head reveal"><span class="eyebrow">Receipts</span><h2>Sources</h2></div>
+  <div class="sources reveal"><ol><li>[Source]</li><li>[Source]</li><li>[Source]</li></ol></div>
+</div></section>
+
+<div class="stripe"><span class="r"></span><span class="w"></span><span class="b"></span><span class="g"></span><span class="y"></span><span class="g"></span><span class="r"></span></div>
+<footer><div class="hearts">❤️🖤💚</div>[Class name] · [Semester]</footer>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+  var links=document.querySelectorAll('nav a');
+  var secs=[].map.call(links,function(a){return document.querySelector(a.getAttribute('href'))});
+  function onScroll(){var y=window.scrollY+140,cur=0;secs.forEach(function(s,i){if(s&&s.offsetTop<=y)cur=i});links.forEach(function(a,i){a.classList.toggle('on',i===cur)});}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+})();
+</script>
+</body>
+</html>
